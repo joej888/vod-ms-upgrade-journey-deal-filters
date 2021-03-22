@@ -1,0 +1,82 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+      "version": "1.0.0",
+      "title": "Deal Filters",
+      "description": "Deal Filters",
+      "license": {
+        "name": "MIT",
+        "url": "https://opensource.org/licenses/MIT"
+      }
+    },
+    "host": "localhost:8080",
+    "basePath": "/",
+    "schemes": ["http"],
+    "consumes": ["application/json"],
+    "produces": ["application/json"],
+    "paths": {
+      "/vod-ms-upgrade-journey/tmf-api/productCatalogManagement/v4/category/brandNames": {
+        "get": {
+          "tags": ["Brands or Manufacturers"],
+          "summary": "Get all mobile brands available",
+          "responses": {
+            "200": {
+              "description": "Mobile Brands are fetched successfully"
+            },
+            "400":{
+              "description": "Missing required input parameter"
+            },
+            "401":{
+              "description":"Not authorized"
+            },
+            "404":{
+              "description":"No Brands Found"
+            },
+            "424":{
+              "description": "Upstream call failed with a 500. Response will be identical to upstream failure"
+            },
+            "500":{
+              "description": "Technical error occured, service failure."
+            }
+          }
+        }
+      },
+      "/vod-ms-upgrade-journey/tmf-api/productCatalogManagement/v4/productSpecification": {
+        "get": {
+          "tags": ["Models or Devices"],
+          "summary": "Filter models with respect brands",
+          "parameters": [
+            {
+              "in": "query",
+              "name": "brandName",
+              "required": true,
+              "schema": {
+                "type": "string"
+              },
+              "description": "The brand name whose associated devices are to be retrieved"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Models are fetched successfully"
+            },
+            "400":{
+              "description": "Missing required input parameter"
+            },
+            "401":{
+              "description":"Not authorized"
+            },
+            "404":{
+              "description":"No Devices Found"
+            },
+            "424":{
+              "description": "Upstream call failed with a 500. Response will be identical to upstream failure"
+            },
+            "500":{
+              "description": "Technical error occured, service failure."
+            }
+          }
+        }
+      }
+    }
+  }
