@@ -12,4 +12,13 @@
 
 ***Swagger is available on localhost:8080/swagger
 
+***Api Links
+
+**localhost:8080/vod-ms-upgrade-journey/tmf-api/productCatalogManagement/v4/category/brandNames
+
+**localhost:8080/vod-ms-upgrade-journey/tmf-api/productCatalogManagement/v4/productSpecification?brandName=samsung
+
+**localhost:8080/vod-ms-upgrade-journey/tmf-api/productCatalogManagement/v4/productSpecification?brandName=samsung
+
+
 Thanks...
