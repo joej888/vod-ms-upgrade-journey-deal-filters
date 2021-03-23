@@ -18,7 +18,7 @@
 
 **localhost:8080/vod-ms-upgrade-journey/tmf-api/productCatalogManagement/v4/productSpecification?brandName=samsung
 
-**localhost:8080/vod-ms-upgrade-journey/tmf-api/productCatalogManagement/v4/productSpecification?brandName=samsung
+**localhost:8080/vod-ms-upgrade-journey/tmf-api/productCatalogManagement/v4/productSpecification?brandName=apple
 
 
 Thanks...
