@@ -19,6 +19,14 @@ app.use((req,res,next) => {
 
 app.get('/vod-ms-upgrade-journey/tmf-api/productCatalogManagement/v4/productSpecification/',dealFilterDevicesController.getModels)
 app.get('/vod-ms-upgrade-journey/tmf-api/productCatalogManagement/v4/category/brandNames',dealFilterBrandsController.getBrands)
+app.get('/')
+app.get('*', function(req, res){
+  res.status(404).json({
+    "code": "404",   
+    "reason": "Not Found",
+    "message": "The endpoint was not found",
+    "status": "Error"
+})})
 app.use("/swagger", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 app.listen(port);
